@@ -13,19 +13,18 @@ import Hero from "../components/Hero.astro";
     <main class="wrapper about">
       <Hero
         title="About"
-        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+        tagline="Thanks for checking out my website. Read on to learn a little more about me and my background."
       />
 
       <section>
         <h2 class="section-title">Background</h2>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a>
-             makes people happy. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Proin nibh nisl condimentum id venenatis a
-            condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut
-            sem nulla pharetra diam sit amet. Diam quis enim lobortis
-            scelerisque fermentum dui faucibus in ornare.
+            Lorem ipsum dolor sit amet. Sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Proin nibh nisl condimentum id
+            venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc.
+            Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim
+            lobortis scelerisque fermentum dui faucibus in ornare.
           </p>
           <p>
             Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget
@@ -46,13 +45,22 @@ import Hero from "../components/Hero.astro";
       <section>
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p>Corporis voluptates tenetur laudantium.</p>
+          <p>Pennsylvania State University</p>
+          <p>Computer Science and Digital Arts & Media Design</p>
+          <p>3.97 GPA</p>
         </div>
       </section>
       <section>
         <h2 class="section-title">Skills</h2>
         <div class="content">
-          <p>officia unde omnis</p>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>Vue.js</li>
+            <li>Mongo</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Shell</li>
+          </ul>
         </div>
       </section>
     </main>
@@ -115,6 +123,23 @@ import Hero from "../components/Hero.astro";
     section {
       display: contents;
       font-size: var(--text-lg);
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0px;
+    }
+
+    .skills-list li {
+      display: inline;
+    }
+
+    .skills-list li::after {
+      content: ", ";
+    }
+
+    .skills-list li:last-child::after {
+      content: "";
     }
   }
 </style>
